@@ -3,10 +3,7 @@ app.controller("mainCtrl", mainCtrl)
 app.directive("movie", movieDirective);
 
 function mainCtrl($scope, $http){
-    alert("enetered mainCtrl!");
     $scope.movies = [];
-    $scope.movies.genre="12";
-    $scope.movies.rating="all"; //initial values set, but doesn't seem to be working
 
     $scope.Update = function(form){
         
