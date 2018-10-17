@@ -4,6 +4,7 @@ app.directive("movie", movieDirective);
 
 function mainCtrl($scope, $http){
     $scope.movies = [];
+    $scope.movielist = [];
 
     $scope.Update = function(form){
         
@@ -17,8 +18,11 @@ function mainCtrl($scope, $http){
 
         var completeUrl = url + dateQuery + genreQuery;
         $http.get(completeUrl).then(function(response){
-            $scope.movies = response.data;
-            console.log(response.data);
+            for(var i = 0; i < response.data.results.length; i++){
+                $scope.movielist.push(response.data.results[i]);
+            }
+            console.log(response.data.results)
+            console.log($scope.movielist);
         });
 
     }
