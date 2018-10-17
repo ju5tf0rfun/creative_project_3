@@ -11,14 +11,79 @@
     <meta charset="utf-8">
 
 
-    <title>User Avatar Template</title>
+    <title>Movie App</title>
 </head>
 
 <body>
-    <div class="container" ng-app="myApp" ng-controller="myCtrl">
-        <form>
+    <div class="container" ng-app="myApp" ng-controller="mainCtrl">
+        <form name="movies" ng-submit="Update(movies)">
             
             <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option1"  value="28" > Action
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option2" value="12"> Adventure
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option3" value="16"> Animation
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option4" value="35"> Comedy
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option5" value="80"> Crime
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option6" value="99"> Documentary
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option7" value="18"> Drama
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option8" value="10751"> Family
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option9" value="14"> Fantasy
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option10" value="36"> History
+                </label>
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option11" value="27"> Horror
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option12" value="10402"> Music
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option13" value="9648"> Mystery
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option14" value="10749"> Romance
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option15" value="878"> Science Fiction
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option16" value="10770"> TV Movie
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option17" value="53"> Thriller
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option18" value="10752"> War
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.genre" name="genre" id="option19" value="37"> Western
+                </label>
+            </div>
+            
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" ng-model = "movies.rating" name="rating" id="option0" value="all" > All
+                </label>
                 <label class="btn btn-primary">
                     <input type="radio" ng-model = "movies.rating" name="rating" id="option1" value="G"> G
                 </label>
@@ -32,28 +97,9 @@
                     <input type="radio" ng-model = "movies.rating" name="rating" id="option4" value="R"> R
                 </label>
             </div>
-            
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="radio" ng-model = "movies.genre" name="genre" id="option1"  value="28"> Action
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" ng-model = "movies.genre" name="genre" id="option2" value="xxx"> Romance
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" ng-model = "movies.genre" name="genre" id="option3" value="xxx"> Drama
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" ng-model = "movies.genre" name="genre" id="option4" value="xxx"> Documentary
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" ng-model = "movies.genre" name="genre" id="option5" value="xxx"> Horror
-                </label>
-            </div>
-            
             <input type="submit" value="Submit" />
         </form>
         <div class="">{{movies.genre}}</div>
-        
+       <!--<movie movie=movie>-->
     </div>
 </body>
