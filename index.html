@@ -129,6 +129,11 @@
         </form>
         <div class="">{{movies.genre}}</div>
         <div class=""><movie movie="movie" /></div>
+        <div ng-repeat = "x in movielist">
+            <img src="{{x.image}}">
+            <h4>{{x.title}}</h4>
+            <p>{{x.overview}}</p>
+        </div>
        
     </div>
 </body>

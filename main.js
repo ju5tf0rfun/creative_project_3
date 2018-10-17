@@ -19,8 +19,15 @@ function mainCtrl($scope, $http){
         var completeUrl = url + dateQuery + genreQuery;
         $http.get(completeUrl).then(function(response){
             for(var i = 0; i < response.data.results.length; i++){
-                $scope.movielist.push(response.data.results[i]);
+                $scope.movielist.push({
+                    title: response.data.results[i].title,
+                    overview: response.data.results[i].overview,
+                    image: "https://image.tmdb.org/t/p/w500" + response.data.results[i].poster_path
+                    
+                });
+                console.log("https://image.tmdb.org/t/p/w500" + response.data.results[i].poster_path)
             }
+            
             console.log(response.data.results)
             console.log($scope.movielist);
         });
