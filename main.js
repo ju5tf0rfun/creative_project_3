@@ -32,12 +32,7 @@ function movieDirective() {
             movie: "="
         },
         restrict: "E",
-        replace: "true",
-        template: (
-            'div class="Movie">' + 
-            '<h4>{{movie.rating}}"</h4>' +
-            '<h4>{{movie.genre}}"</h4>' +
-            '</div>'
-        )
+        replace: true,
+        template: ("<div class='Movie'><h4>{{movie.rating}}</h4><h4>{{movie.genre}}</h4></div>")
     };
 }
