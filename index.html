@@ -8,14 +8,16 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Movie Suggestions</title>
 </head>
 
 <body>
-    <div class="jumbotron"><h1>Movie Finder</h1><h4>Get top movie suggestions!</h4></div>
+    <div class="jumbotron"style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg)"><div class="container"><i class="fas fa-film fa-9x"></i>
+    <div class="" style = "display:inline-block; padding-left:25px"><h1 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Movie Finder</strong></h1><h4>Get top movie suggestions!</h4></div></div></div>
     <div class="container" ng-app="myApp" ng-controller="mainCtrl">
         <form name="movies" ng-submit="Update(movies)">
             <h4>Select a Genre</h4>
@@ -50,8 +52,6 @@
                 <label class="btn btn-primary">
                     <input type="radio" ng-model = "movies.genre" name="genre" id="option10" value="36"> History
                 </label>
-            </div>
-            <div class="btn-group-horizontal" data-toggle="buttons">
                 <label class="btn btn-primary">
                     <input type="radio" ng-model = "movies.genre" name="genre" id="option11" value="27"> Horror
                 </label>
@@ -132,7 +132,7 @@
 
         <div class="movieResult" ng-repeat = "x in movielist" style="clear:left; align-items: center; display: flex; padding-top: 4%;">
             <img src="{{x.image}}" style="float: left; height:400px;">
-            <div style="padding: 1%;">
+            <div style="padding: 1%; padding-left: 5%;">
                 <h4>{{x.title}}</h4><p><i>{{x.date}}</i></p><br>
                 <p>{{x.overview}}</p><br>
             </div>
